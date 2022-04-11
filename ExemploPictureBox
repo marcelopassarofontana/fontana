@@ -1,0 +1,148 @@
+namespace WFA_PictureBox_Exemplo2
+{
+    public partial class FormExemploPictureBox : Form
+    {
+        public FormExemploPictureBox()
+        {
+            InitializeComponent();
+        }
+
+        private void radioButtonComputador_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxComp1.Visible = true;
+            radioButtonComp1.Visible = true;
+            pictureBoxComp2.Visible = true;
+            radioButtonComp2.Visible = true;
+            pictureBoxComp3.Visible = true;
+            radioButtonComp3.Visible = true;
+
+            pictureBoxNote1.Visible = false;
+            radioButtonNote1.Visible = false;
+            pictureBoxNote2.Visible = false;
+            radioButtonNote2.Visible = false;
+            pictureBoxNote3.Visible = false;
+            radioButtonNote3.Visible = false;
+
+            labelmensagem.Visible = false;
+
+
+        }
+
+        private void radioButtonNoteboks_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxNote1.Visible = true;
+            radioButtonNote1.Visible = true;
+            pictureBoxNote2.Visible = true;
+            radioButtonNote2.Visible = true;
+            pictureBoxNote3.Visible = true;
+            radioButtonNote3.Visible = true;
+
+            pictureBoxComp1.Visible = false;
+            radioButtonComp1.Visible = false;
+            pictureBoxComp2.Visible = false;
+            radioButtonComp2.Visible = false;
+            pictureBoxComp3.Visible = false;
+            radioButtonComp3.Visible = false;
+
+            labelmensagem.Visible = false;
+        }
+
+        private void radioButtonComp1_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxComp2.Visible=false;
+            radioButtonComp2.Visible=false;
+            pictureBoxComp3.Visible=false;
+            radioButtonComp3.Visible = false;
+            labelmensagem.Text = " o Computador Escolhido:" + radioButtonComp1.Text+ "  Custa R$ 1500,00" ;
+            labelmensagem.Visible = true;
+
+        }
+
+        private void radioButtonComp2_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxComp1.Visible = false;
+            radioButtonComp1.Visible = false;
+            pictureBoxComp3.Visible = false;
+            radioButtonComp3.Visible = false;
+            labelmensagem.Text = " o Computador Escolhido:" + radioButtonComp2.Text + "  Custa R$ 2500,00";
+            labelmensagem.Visible = true;
+        }
+
+        private void radioButtonComp3_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxComp1.Visible = false;
+            radioButtonComp1.Visible = false;
+            pictureBoxComp2.Visible = false;
+            radioButtonComp2.Visible = false;
+            labelmensagem.Text = " o Computador Escolhido:" + radioButtonComp3.Text + "  Custa R$ 4500,00";
+            labelmensagem.Visible = true;
+        }
+
+        private void radioButtonNote1_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxNote2.Visible = false;
+            radioButtonNote2.Visible = false;
+            pictureBoxNote3.Visible = false;
+            radioButtonNote3.Visible = false; 
+            labelmensagem.Text = " O Notebook Escolhido:" + radioButtonNote1.Text + "  Custa R$ 2500,00";
+            labelmensagem.Visible = true;
+        }
+
+        private void radioButtonNote2_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxNote1.Visible = false;
+            radioButtonNote1.Visible = false;
+            pictureBoxNote3.Visible = false;
+            radioButtonNote3.Visible = false;
+            labelmensagem.Text = " O Notebook Escolhido:" + radioButtonNote2.Text + "  Custa R$ 4500,00";
+            labelmensagem.Visible = true;
+        }
+
+        private void radioButtonNote3_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxNote1.Visible = false;
+            radioButtonNote1.Visible = false;
+            pictureBoxNote2.Visible = false;
+            radioButtonNote2.Visible = false;
+            labelmensagem.Text = " O Notebook Escolhido:" + radioButtonNote3.Text + "  Custa R$ 5500,00";
+            labelmensagem.Visible = true;
+        }
+
+        private void buttonLimpar_Click(object sender, EventArgs e)
+        {
+            radioButtonComputador.Checked = false;
+            radioButtonComp1.Checked = false;
+            radioButtonComp2.Checked = false;
+            radioButtonComp3.Checked = false;
+            radioButtonNoteboks.Checked = false;
+            radioButtonNote1.Checked = false;
+            radioButtonNote2.Checked = false;
+            radioButtonNote3.Checked = false;
+
+            pictureBoxComp1.Visible = false;
+            radioButtonComp1.Visible = false;
+            pictureBoxComp2.Visible = false;
+            radioButtonComp2.Visible = false;
+            pictureBoxComp3.Visible = false;
+            radioButtonComp3.Visible = false;
+
+            pictureBoxNote1.Visible=false;
+            radioButtonNote1.Visible=false;
+            pictureBoxNote2.Visible = false;
+            radioButtonNote2.Visible = false;
+            pictureBoxNote3.Visible = false;
+            radioButtonNote3.Visible = false;
+            
+            labelmensagem.Visible=false;
+
+
+
+        }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+    }
+}
